@@ -1,12 +1,12 @@
 {
   "manifest_version": 3,
-  "name": "React Content Script",
+  "name": "Facebook Groups Extension",
   "version": "1.0.0",
   "permissions": ["storage", "scripting", "activeTab", "tabs"],
   "host_permissions": [
-    "https://twitter.com/*",
-    "https://x.com/*",
-    "http://localhost:4000/*",
+    "https://www.facebook.com/*",
+    "https://facebook.com/*",
+    "https://m.facebook.com/*",
     "<all_urls>"
   ],
   "action": {
@@ -20,7 +20,7 @@
 },
   "content_scripts": [
     {
-      "matches": ["https://blank.org/*"],
+      "matches": ["https://www.facebook.com/*", "https://facebook.com/*", "https://m.facebook.com/*"],
       "js": ["content-script/src/main.tsx"],
       "media": []
     }
